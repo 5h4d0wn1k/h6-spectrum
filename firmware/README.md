@@ -1,0 +1,32 @@
+# Spectrum Analyzer Firmware
+
+## Purpose
+
+WiFi channel energy visualization and frequency scanning across the 2.4 GHz ISM band (receive-only).
+
+## Board
+
+- **Board**: ESP32-C6
+- **FQBN**: `esp32:esp32:esp32c6`
+- **Sketch**: `h6_spectrum/h6_spectrum.ino`
+
+## Wiring
+
+```
+Standalone ESP32-C6 (WiFi radio built-in). USB-C for serial/power.
+```
+
+## Build
+
+```bash
+arduino-cli compile --fqbn esp32:esp32:esp32c6 firmware/h6_spectrum
+# upload (example, ESP32-C6):
+# arduino-cli upload --fqbn esp32:esp32:esp32c6 --port /dev/ttyACM0 firmware/h6_spectrum
+```
+
+## Runtime
+
+See the root README "IMPORTANT" section before powering on. This firmware is
+for authorized own-lab study. Serial console exposes the interactive command
+set described in the root README. All identifiers in the sketch are
+placeholders (`lab-*` SSIDs, `00:11:22:33:44:55`, RFC 5737 / example.com).
